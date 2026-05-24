@@ -1,0 +1,79 @@
+name: uangapp
+description: Real-time financial tracker with Google Sheets and Groq AI voice input.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Google auth & APIs (user OAuth — Sheets/Drive only)
+  google_sign_in: ^7.2.0
+  googleapis: ^16.0.0
+  googleapis_auth: ^2.3.1
+  extension_google_sign_in_as_googleapis_auth: ^3.0.0
+  http: ^1.2.2
+
+  # Groq AI (API key via .env — never mixed with Google OAuth)
+  flutter_dotenv: ^6.0.1
+
+  # State management
+  flutter_bloc: ^9.1.0
+  provider: ^6.1.0
+  equatable: ^2.0.7
+
+  # Local cache & offline queue
+  shared_preferences: ^2.3.5
+  sqflite: ^2.3.0
+  path: ^1.9.0
+
+  # Connectivity
+  connectivity_plus: ^7.1.1
+
+  # Voice input
+  speech_to_text: ^7.0.0
+  permission_handler: ^12.0.1
+
+  # Utilities
+  uuid: ^4.5.1
+  intl: ^0.20.2
+  url_launcher: ^6.3.1
+
+  # Notifikasi harian
+  flutter_local_notifications: ^21.0.0
+  timezone: ^0.11.0
+  flutter_timezone: ^5.0.2
+  flutter_native_splash: ^2.4.6
+  fl_chart: ^0.70.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.3
+  image: ^4.5.4
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/branding/app_icon.png
+  adaptive_icon_background: "#5B8266"
+  adaptive_icon_foreground: assets/branding/app_icon_foreground.png
+  remove_alpha_ios: true
+
+flutter_native_splash:
+  color: "#5B8266"
+  android_12:
+    color: "#5B8266"
+  ios: true
+  android: true
+  fullscreen: true
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
+    - assets/branding/app_icon.png
